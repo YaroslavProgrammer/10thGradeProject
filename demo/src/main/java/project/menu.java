@@ -13,8 +13,8 @@ public class menu extends JPanel {
         @Override
         public void mouseClicked(MouseEvent e) {
             //System.out.println(e.getPoint().x + "  " + e.getPoint().y);
-            if (e.getPoint().x > 644 && e.getPoint().x < 836 && e.getPoint().y > 509 && e.getPoint().y < 690)System.out.println(e.getPoint().x + "  " + e.getPoint().y);
-            if (e.getPoint().x > 1185 && e.getPoint().x < 1374 && e.getPoint().y > 503 && e.getPoint().y < 687) System.out.println(e.getPoint().x + "  " + e.getPoint().y);
+            if (e.getPoint().x > 644 && e.getPoint().x < 836 && e.getPoint().y > 509 && e.getPoint().y < 690)System.exit(0);
+            if (e.getPoint().x > 1185 && e.getPoint().x < 1374 && e.getPoint().y > 503 && e.getPoint().y < 687) new Main();
         }
 
         @Override
@@ -41,10 +41,10 @@ public class menu extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         try {
-            Image sett = ImageIO.read(new File("H://project/settings.png")); //пути для картинок сделаю уже на уроке, потому что там другие компьютеры и пути будут отличаться            Image sett = ImageIO.read(new File(""));
-            Image bg = ImageIO.read(new File("H://project/background.png"));
-            Image play = ImageIO.read(new File("H://project/play.png"));
-            Image menu = ImageIO.read(new File("H://project/menu.png"));
+            Image sett = ImageIO.read(new File("demo/src/settings.png")); //пути для картинок сделаю уже на уроке, потому что там другие компьютеры и пути будут отличаться            Image sett = ImageIO.read(new File(""));
+            Image bg = ImageIO.read(new File("demo/src/background.png"));
+            Image play = ImageIO.read(new File("demo/src/play.png"));
+            Image menu = ImageIO.read(new File("demo/src/menu.png"));
             g.drawImage(bg,0, 0, null);
             g.drawImage(menu,640, 500, null);
             g.drawImage(sett,910, 500, null);

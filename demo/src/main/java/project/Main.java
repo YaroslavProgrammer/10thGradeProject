@@ -43,14 +43,14 @@ public class Main extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         try {
-            Image solarPanel = ImageIO.read(new File("H://project/SolarPanel.png")); //пути для картинок сделаю уже на уроке, потому что там другие компьютеры и пути будут отличаться            Image sett = ImageIO.read(new File(""));
+            Image solarPanel = ImageIO.read(new File("src/SolarPanel.png")); //пути для картинок сделаю уже на уроке, потому что там другие компьютеры и пути будут отличаться            Image sett = ImageIO.read(new File(""));
             g.drawImage(solarPanel,0, 0, null);
         }
         catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public static void game(String[] args) {
+    public static void main(String[] args) {
         JFrame wind = new JFrame("");
         wind.add(new Main());
         wind.setSize(1920, 1080);
